@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    //int   -->   -10^9 to 10^9
+    //long  -->   -10^12 to 10^12
+    //long long  -->  -10^18 to 10^18
+    //float
+    //double 
+    //string 
+    //getline 
+    //char  ==> Single character
+    int n;
+    cout <<" Welcome to the world of microsoft"<<"\n";
+    cout <<"Enter the Expected package  ----> ";
+    cin >>n;
+    cout <<" The package is :"<<n <<"\n";
+    string str;
+    /*
+        The issue in the code is that after reading the value of n using cin, the newline 
+        character is left in the input buffer, which causes the getline function to read 
+        an empty string. To fix this, you need to clear the input buffer before calling getline
+    */
+    cin.ignore(); // clear the input buffer
+    cout <<"Enter your dream company";
+    getline(cin,str);
+    cout <<" The dream company is "<<str;
+}
